@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "955033657512",
+    "firebase_url": "https://netcampappproject-default-rtdb.firebaseio.com",
+    "project_id": "netcampappproject",
+    "storage_bucket": "netcampappproject.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:955033657512:android:dfe26f80a1bb24893f629d",
+        "android_client_info": {
+          "package_name": "com.example.netcamp_app_project"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "955033657512-90qvgn75r1uqk4f4hufngd2jdqb0fb94.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.netcamp_app_project",
+            "certificate_hash": "b4f0d21d5c3d62c44ab77ada865edf8a945d579e"
+          }
+        },
+        {
+          "client_id": "955033657512-ftfsit36kol7g5okoqhe543q50ud0egi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCqo0Czjedx4AzZg2xJHYzKgcAadqslij4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "955033657512-ftfsit36kol7g5okoqhe543q50ud0egi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
