@@ -53,13 +53,14 @@
 
     <Button
         android:id="@+id/button1"
-        android:layout_width="153dp"
-        android:layout_height="63dp"
+        android:layout_width="148dp"
+        android:layout_height="57dp"
+        android:background="#3C0B0B"
         android:text="Login"
         android:textAlignment="center"
+        android:textAllCaps="false"
         android:textSize="25dp"
         android:textStyle="bold"
-        android:textAllCaps="false"
         app:backgroundTint="#3C0B0B"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
