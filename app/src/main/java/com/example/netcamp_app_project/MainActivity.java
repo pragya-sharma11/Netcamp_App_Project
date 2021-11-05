@@ -30,6 +30,11 @@ public class MainActivity extends AppCompatActivity {
         b3 = findViewById(R.id.button3);
         b4 = findViewById(R.id.button4);
         f1 = FirebaseAuth.getInstance();
+        if(f1.getCurrentUser()!=null){
+            Intent next= new Intent(MainActivity.this, PhoneScreen.class);
+            startActivity(next);
+            finish();
+        }
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
