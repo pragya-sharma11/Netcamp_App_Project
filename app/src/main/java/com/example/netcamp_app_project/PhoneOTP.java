@@ -29,6 +29,7 @@ public class PhoneOTP extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_phone_o_t_p);
+        mobile = getIntent().getStringExtra("phone").toString();
         e = findViewById(R.id.editText4);
         b1 = findViewById(R.id.button7);
         b2 = findViewById(R.id.button8);

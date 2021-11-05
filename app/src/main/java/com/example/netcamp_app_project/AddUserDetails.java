@@ -45,7 +45,7 @@ public class AddUserDetails extends AppCompatActivity {
                 }
                 else{
                     Users users = new Users(s1, s2, s3);
-                    dbref.child(s3).setValue(s1,s2).addOnCompleteListener(new OnCompleteListener<Void>() {
+                    dbref.child(s3).setValue(users).addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override
                         public void onComplete(@NonNull Task<Void> task) {
                             if(task.isSuccessful()){

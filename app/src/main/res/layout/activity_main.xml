@@ -122,7 +122,7 @@
         android:id="@+id/button4"
         android:layout_width="wrap_content"
         android:layout_height="52dp"
-        android:background="none"
+        android:backgroundTint="#3C0B0B"
         android:gravity="center_vertical"
         android:text="create one"
         android:textAllCaps="false"
