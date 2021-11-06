@@ -32,4 +32,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/m" />
+
+    <Button
+        android:id="@+id/musicBack"
+        android:layout_width="161dp"
+        android:layout_height="81dp"
+        android:text="Back"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:backgroundTint="@color/teal_200"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.881" />
 </androidx.constraintlayout.widget.ConstraintLayout>
