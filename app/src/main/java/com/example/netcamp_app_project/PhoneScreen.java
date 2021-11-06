@@ -77,7 +77,9 @@ public class PhoneScreen extends AppCompatActivity {
         i8.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent i = new Intent(PhoneScreen.this, PhoneSetting.class);
+                startActivity(i);
+                finish();
             }
         });
     }
