@@ -4,6 +4,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -12,7 +13,7 @@ import android.widget.TextView;
 
 public class TicTacToe extends AppCompatActivity {
     ImageView button1, button2, button3, button4, button5, button6, button7, button8, button9;
-    Button reset;
+    Button reset, back;
     private String startGame = "X";
     private int b1 = 5, b2 = 5, b3 = 5, b4 = 5, b5 = 5, b6 = 5, b7 = 5, b8 = 5, b9 = 5, xCount = 0, oCount = 0, i = 0;
     private TextView scoreX, scoreO;
@@ -32,6 +33,15 @@ public class TicTacToe extends AppCompatActivity {
         scoreX = findViewById(R.id.scoreX);
         scoreO = findViewById(R.id.score0);
         reset = findViewById(R.id.reset);
+        back = findViewById(R.id.tictacBack);
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(TicTacToe.this, PhoneScreen.class);
+                startActivity(i);
+                finish();
+            }
+        });
         onClickReset();
         onClickButton1();
         onClickButton2();
