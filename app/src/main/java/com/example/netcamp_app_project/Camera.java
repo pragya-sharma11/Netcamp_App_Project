@@ -29,6 +29,14 @@ public class Camera extends AppCompatActivity {
                 startActivityForResult(intent,100);
             }
         });
+        b2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(Camera.this, PhoneScreen.class);
+                startActivity(i);
+                finish();
+            }
+        });
     }
     @MainThread
     protected void onActivityResult(int requestCode, int resultCode, Intent data){
