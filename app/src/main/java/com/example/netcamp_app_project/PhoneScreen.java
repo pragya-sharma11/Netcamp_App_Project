@@ -55,7 +55,9 @@ public class PhoneScreen extends AppCompatActivity {
         i5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent i = new Intent(PhoneScreen.this, Music.class);
+                startActivity(i);
+                finish();
             }
         });
         i6.setOnClickListener(new View.OnClickListener() {
