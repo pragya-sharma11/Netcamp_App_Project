@@ -19,7 +19,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Netcamp_App_Project">
-        <activity android:name=".Music"></activity>
+        <activity android:name=".PhoneCall"></activity>
+        <activity android:name=".Music" />
         <activity android:name=".TicTacToe" />
         <activity android:name=".GoogleSearch" />
         <activity android:name=".Camera" />
