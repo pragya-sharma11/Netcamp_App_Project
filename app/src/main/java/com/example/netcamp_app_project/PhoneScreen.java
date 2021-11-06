@@ -5,10 +5,15 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
+
+import com.google.firebase.auth.FirebaseAuth;
 
 public class PhoneScreen extends AppCompatActivity {
     ImageButton i1, i2, i3, i4, i5, i6, i7, i8;
+    Button b;
+    FirebaseAuth f;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +27,17 @@ public class PhoneScreen extends AppCompatActivity {
         i6 = findViewById(R.id.imageButton6);
         i7 = findViewById(R.id.imageButton7);
         i8 = findViewById(R.id.imageButton8);
+        b = findViewById(R.id.LogoutScreen);
+        f = FirebaseAuth.getInstance();
+        b.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                f.signOut();
+                Intent i = new Intent(PhoneScreen.this, MainActivity.class);
+                startActivity(i);
+                finish();
+            }
+        });
         i1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
