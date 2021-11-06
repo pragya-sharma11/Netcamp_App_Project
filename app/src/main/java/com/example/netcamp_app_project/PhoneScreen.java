@@ -69,7 +69,9 @@ public class PhoneScreen extends AppCompatActivity {
         i7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent i = new Intent(PhoneScreen.this, PhoneCall.class);
+                startActivity(i);
+                finish();
             }
         });
         i8.setOnClickListener(new View.OnClickListener() {
