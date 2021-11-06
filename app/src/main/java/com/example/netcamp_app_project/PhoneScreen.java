@@ -2,6 +2,7 @@ package com.example.netcamp_app_project;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
@@ -24,13 +25,17 @@ public class PhoneScreen extends AppCompatActivity {
         i1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent i = new Intent(PhoneScreen.this, Camera.class);
+                startActivity(i);
+                finish();
             }
         });
         i2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent i = new Intent(PhoneScreen.this, GoogleSearch.class);
+                startActivity(i);
+                finish();
             }
         });
         i3.setOnClickListener(new View.OnClickListener() {
