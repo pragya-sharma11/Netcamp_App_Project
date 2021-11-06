@@ -41,7 +41,9 @@ public class PhoneScreen extends AppCompatActivity {
         i3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent i = new Intent(PhoneScreen.this, TicTacToe.class);
+                startActivity(i);
+                finish();
             }
         });
         i4.setOnClickListener(new View.OnClickListener() {
