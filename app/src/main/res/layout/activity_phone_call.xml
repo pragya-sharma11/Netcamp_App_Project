@@ -11,7 +11,7 @@
         android:layout_width="338dp"
         android:layout_height="81dp"
         android:ems="10"
-        android:inputType="textPersonName"
+        android:inputType="phone"
         android:hint="enter phone number"
         android:textSize="25dp"
         android:textColor="@color/black"
