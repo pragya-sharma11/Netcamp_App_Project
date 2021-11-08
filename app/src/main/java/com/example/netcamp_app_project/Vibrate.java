@@ -1,7 +1,6 @@
 package com.example.netcamp_app_project;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 
 public class Vibrate extends AppCompatActivity {
