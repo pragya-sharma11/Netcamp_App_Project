@@ -2,11 +2,9 @@ package com.example.netcamp_app_project;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.annotation.SuppressLint;
-import android.bluetooth.BluetoothAdapter;
-import android.hardware.camera2.CameraAccessException;
-import android.hardware.camera2.CameraManager;
+import android.content.Intent;
 import android.os.Bundle;
+import android.os.Vibrator;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -26,28 +24,36 @@ public class PhoneSetting extends AppCompatActivity {
         i1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent i = new Intent(PhoneSetting.this, Bluetooth.class);
+                startActivity(i);
+                finish();
             }
         });
 
         i2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent i = new Intent(PhoneSetting.this, Wifi.class);
+                startActivity(i);
+                finish();
             }
         });
 
         i3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent i = new Intent(PhoneSetting.this, Torch.class);
+                startActivity(i);
+                finish();
             }
         });
 
         i4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent i = new Intent(PhoneSetting.this, Vibrate.class);
+                startActivity(i);
+                finish();
             }
         });
 

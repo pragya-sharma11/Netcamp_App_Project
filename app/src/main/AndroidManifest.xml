@@ -19,7 +19,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Netcamp_App_Project">
-        <activity android:name=".PhoneSetting"></activity>
+        <activity android:name=".Torch"></activity>
+        <activity android:name=".Vibrate" />
+        <activity android:name=".Wifi" />
+        <activity android:name=".Bluetooth" />
+        <activity android:name=".PhoneSetting" />
         <activity android:name=".PhoneCall" />
         <activity android:name=".Music" />
         <activity android:name=".TicTacToe" />
