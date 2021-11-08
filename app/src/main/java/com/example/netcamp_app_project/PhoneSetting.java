@@ -1,11 +1,14 @@
 package com.example.netcamp_app_project;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.bluetooth.BluetoothAdapter;
 import android.content.Intent;
+import android.hardware.camera2.CameraManager;
+import android.net.wifi.WifiManager;
+import android.os.Build;
 import android.os.Bundle;
-import android.os.Vibrator;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -15,6 +18,9 @@ public class PhoneSetting extends AppCompatActivity {
     boolean blt = false, wifi = false, flash = false, vibrate = false;
     Button back;
     BluetoothAdapter b;
+    WifiManager wf;
+    CameraManager cm;
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,6 +31,8 @@ public class PhoneSetting extends AppCompatActivity {
         i4 = findViewById(R.id.settingVibrate);
         back = findViewById(R.id.settingBack);
         b = BluetoothAdapter.getDefaultAdapter();
+        wf = (WifiManager) getApplicationContext().getSystemService(WIFI_SERVICE);
+        cm = (CameraManager) getApplicationContext().getSystemService(CAMERA_SERVICE);
         i1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -40,9 +48,12 @@ public class PhoneSetting extends AppCompatActivity {
         i2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(PhoneSetting.this, Wifi.class);
-                startActivity(i);
-                finish();
+                if(!wifi){
+                    wf.setWifiEnabled(true);
+                }else{
+                    wf.setWifiEnabled(false);
+                }
+                wifi = !wifi;
             }
         });
 
@@ -67,7 +78,9 @@ public class PhoneSetting extends AppCompatActivity {
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent i = new Intent(PhoneSetting.this, PhoneScreen.class);
+                startActivity(i);
+                finish();
             }
         });
     }
