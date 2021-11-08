@@ -19,13 +19,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Netcamp_App_Project">
+        <activity android:name=".Video"></activity>
         <activity android:name=".PhoneSetting" />
         <activity android:name=".PhoneCall" />
         <activity android:name=".Music" />
         <activity android:name=".TicTacToe" />
         <activity android:name=".GoogleSearch" />
-        <activity android:name=".Camera" />
-<!--        <activity android:name=".phoneScreen.Camera" />-->
+        <activity android:name=".Camera" /> <!-- <activity android:name=".phoneScreen.Camera" /> -->
         <activity android:name=".PhoneScreen" />
         <activity android:name=".CreateAccount" />
         <activity android:name=".AddUserDetails" />
