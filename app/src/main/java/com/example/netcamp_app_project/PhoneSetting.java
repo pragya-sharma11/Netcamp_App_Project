@@ -2,7 +2,10 @@ package com.example.netcamp_app_project;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.bluetooth.BluetoothAdapter;
+import android.hardware.camera2.CameraAccessException;
+import android.hardware.camera2.CameraManager;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -10,9 +13,7 @@ import android.widget.ImageButton;
 
 public class PhoneSetting extends AppCompatActivity {
     ImageButton i1, i2, i3, i4;
-    boolean blt = false, wifi = false, torch = false, vibrate = false;
     Button back;
-    BluetoothAdapter bluetoothAdapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,16 +23,10 @@ public class PhoneSetting extends AppCompatActivity {
         i3 = findViewById(R.id.settingTorch);
         i4 = findViewById(R.id.settingVibrate);
         back = findViewById(R.id.settingBack);
-        bluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
         i1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(!blt){
-                    bluetoothAdapter.enable();
-                }else{
-                    bluetoothAdapter.disable();
-                }
-                blt = !blt;
+
             }
         });
 
