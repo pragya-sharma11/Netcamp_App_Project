@@ -2,6 +2,7 @@ package com.example.netcamp_app_project;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.bluetooth.BluetoothAdapter;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Vibrator;
@@ -11,7 +12,9 @@ import android.widget.ImageButton;
 
 public class PhoneSetting extends AppCompatActivity {
     ImageButton i1, i2, i3, i4;
+    boolean blt = false, wifi = false, flash = false, vibrate = false;
     Button back;
+    BluetoothAdapter b;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,12 +24,16 @@ public class PhoneSetting extends AppCompatActivity {
         i3 = findViewById(R.id.settingTorch);
         i4 = findViewById(R.id.settingVibrate);
         back = findViewById(R.id.settingBack);
+        b = BluetoothAdapter.getDefaultAdapter();
         i1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(PhoneSetting.this, Bluetooth.class);
-                startActivity(i);
-                finish();
+                if(!blt){
+                    b.enable();
+                }else{
+                    b.disable();
+                }
+                blt = !blt;
             }
         });
 

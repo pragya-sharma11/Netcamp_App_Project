@@ -15,7 +15,7 @@ public class Wifi extends AppCompatActivity {
         setContentView(R.layout.activity_wifi);
         b1 = findViewById(R.id.wifiOn);
         b2 = findViewById(R.id.wifiOff);
-        wf = (WifiManager) getSystemService(WIFI_SERVICE);
+        wf = (WifiManager) getApplicationContext().getSystemService(WIFI_SERVICE);
 
     }
 }
